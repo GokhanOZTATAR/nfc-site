@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153e38">
+  <meta name="description" content="Mağaza ve banka hesap bilgilerine tek dokunuşla ulaşın.">
+  <title>Mağaza bilgileri · Tek Dokunuş</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./magazalar.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <header class="brand"><span class="brand-icon" aria-hidden="true">↗</span> Tek Dokunuş</header>
+  <main>
+    <section id="store-view" class="card" aria-labelledby="store-name" hidden>
+      <div class="store-header">
+        <span id="store-initial" class="store-icon" aria-hidden="true"></span>
+        <p class="eyebrow">MAĞAZA BİLGİLERİ</p>
+        <h1 id="store-name"></h1>
+        <p class="intro">Hesap bilgilerimiz elinizin altında.</p>
+      </div>
+      <div class="details">
+        <div class="section-title"><span class="dot" aria-hidden="true"></span> Banka hesap bilgileri</div>
+        <dl>
+          <div><dt>Hesap sahibi</dt><dd id="account-holder"></dd></div>
+          <div><dt>Banka</dt><dd id="bank-name"></dd></div>
+        </dl>
+        <div class="iban-box">
+          <label for="iban">IBAN</label>
+          <input id="iban" type="text" readonly spellcheck="false" aria-describedby="iban-help">
+        </div>
+        <button id="copy-button" type="button"><span aria-hidden="true">⧉</span> <span id="copy-label">IBAN’ı kopyala</span></button>
+        <p id="copy-status" class="status" role="status" aria-live="polite"></p>
+        <p id="iban-help" class="hint">Transfer öncesinde hesap sahibi ve IBAN bilgisini bankanızda kontrol edin.</p>
+      </div>
+      <div class="card-footer"><span aria-hidden="true">↗</span> Tek dokunuş. Tüm bilgiler.</div>
+    </section>
+    <section id="message-view" class="card message" aria-labelledby="message-title" hidden>
+      <span class="store-icon" aria-hidden="true">↗</span>
+      <p class="eyebrow">TEK DOKUNUŞ</p>
+      <h1 id="message-title"></h1>
+      <p id="message-text" class="intro"></p>
+      <ul id="store-list" class="store-list"></ul>
+    </section>
+    <noscript><section class="card message"><h1>JavaScript gerekli</h1><p>Mağaza bilgilerini görüntülemek için tarayıcınızda JavaScript’i etkinleştirin.</p></section></noscript>
+    <p class="page-note">Mağazanızla bağlantının en kısa yolu.</p>
+  </main>
+  <footer class="site-footer">Tek Dokunuş <span aria-hidden="true">·</span> Mağaza bilgi kartı</footer>
+</body>
+</html>

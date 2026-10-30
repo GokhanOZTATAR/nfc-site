@@ -1,0 +1,40 @@
+:root { color-scheme: light; --ink: #183f39; --muted: #6d7d77; --line: #e7ece7; --accent: #dbedb4; }
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; min-height: 100vh; background: #f4f5ef; color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+.brand { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 40px 20px 32px; font-size: 17px; font-weight: 750; letter-spacing: -.5px; }
+.brand-icon { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 9px; background: var(--ink); color: var(--accent); font-size: 24px; }
+main { width: min(100% - 32px, 460px); margin: 0 auto; }
+.card { background: #fff; border: 1px solid #e0e6dc; border-radius: 24px; overflow: hidden; box-shadow: 0 14px 50px #183f3909; }
+.store-header { padding: 32px 30px 29px; background: #edf2e6; border-bottom: 1px solid #e1e8d9; }
+.store-icon { display: grid; place-items: center; width: 56px; height: 56px; margin-bottom: 26px; border: 1px solid #d3dec8; border-radius: 17px; background: #e0eacb; color: #254f40; font-weight: 700; font-size: 25px; }
+.eyebrow { margin: 0 0 9px; font-size: 10px; font-weight: 750; letter-spacing: 2px; color: #526b59; }
+h1 { margin: 0; font-size: clamp(26px, 6vw, 33px); line-height: 1.2; font-weight: 700; letter-spacing: -1.1px; overflow-wrap: anywhere; }
+.intro { margin: 12px 0 0; font-size: 14px; line-height: 1.6; color: #607367; }
+.details { padding: 28px 30px 23px; }
+.section-title { display: flex; align-items: center; gap: 9px; margin-bottom: 24px; font-size: 13px; font-weight: 700; }
+.dot { width: 7px; height: 7px; background: #68864d; border-radius: 50%; }
+dl { margin: 0; }
+dl > div { margin-bottom: 21px; }
+dt, .iban-box label { display: block; font-size: 11px; font-weight: 600; color: var(--muted); margin: 0 0 7px; }
+dd { margin: 0; font-size: 15px; line-height: 1.5; font-weight: 600; overflow-wrap: anywhere; }
+.iban-box { padding: 15px 14px; margin-top: 4px; border: 1px solid var(--line); border-radius: 12px; background: #fafbf8; }
+.iban-box input { display: block; width: 100%; padding: 0; border: 0; background: transparent; color: var(--ink); font-family: ui-monospace, "Cascadia Code", Consolas, monospace; font-size: clamp(11px, 3vw, 14px); line-height: 1.8; font-weight: 600; letter-spacing: -.25px; }
+button { width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 51px; margin-top: 17px; padding: 13px; border: 0; border-radius: 12px; background: var(--ink); color: white; font: inherit; font-size: 14px; font-weight: 650; cursor: pointer; transition: background .15s; }
+button:hover { background: #26594e; }
+button:disabled { cursor: wait; opacity: .75; }
+button > span:first-child { font-size: 20px; }
+:focus-visible { outline: 3px solid #8aa963; outline-offset: 4px; }
+.status { min-height: 18px; margin: 9px 0 0; color: #315e40; font-size: 12px; line-height: 1.5; text-align: center; }
+.hint { color: var(--muted); font-size: 11px; line-height: 1.7; text-align: center; margin: 8px 0 0; }
+.card-footer { padding: 17px; border-top: 1px solid var(--line); text-align: center; font-size: 11px; color: #748175; }
+.card-footer span { margin-right: 5px; }
+.page-note { margin: 22px 0 0; text-align: center; color: #7d897d; font-size: 12px; }
+.site-footer { padding: 36px 16px 24px; text-align: center; font-size: 10px; color: #899183; }
+.site-footer span { margin: 0 7px; }
+.message { padding: 30px; }
+.store-list { padding: 0; margin: 25px 0 0; list-style: none; }
+.store-list li + li { margin-top: 10px; }
+.store-list a { display: block; padding: 15px; background: #edf2e6; border-radius: 10px; color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 600; overflow-wrap: anywhere; }
+.store-list a:hover { background: #e0eacb; }
+@media (max-width: 380px) { .brand { padding-top: 24px; padding-bottom: 24px; } .details, .store-header, .message { padding-left: 22px; padding-right: 22px; } }
